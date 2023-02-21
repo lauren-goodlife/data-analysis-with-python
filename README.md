@@ -1,8 +1,5 @@
-# FreeCodeCamp Projects
-Those are the projects I completed on freecodecamp.org.
+# Data Analysis With Python - Freecodecamp Course
 
-<h2>Responsive Web Design</h2>
-<ul>
-<li>Build a Typeform - Check this out on CodePen (soon)
-</li>
-</ul>
+Those are the projects I completed on freecodecamp.org for the course "Data Analysis with Python"
+
+-- Mean-Variance-Standard Deviation Calculator
