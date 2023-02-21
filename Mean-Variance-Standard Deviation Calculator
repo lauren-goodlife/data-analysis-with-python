@@ -1,0 +1,55 @@
+import numpy as np
+
+list = [0,1,2,3,4,5,6,7,8]
+
+
+def calculate(list):
+    #error check
+    if len(list) != 9:
+      raise ValueError("List must contain nine numbers.")
+
+    #transform list into array 3x3
+    array = np.array(list).reshape(3,3)
+
+    #mean
+    mean = [np.mean(array, axis=0).tolist(), 
+            np.mean(array, axis=1).tolist(), 
+            np.mean(array.flatten()).tolist()]
+
+    #var
+    variance = [np.var(array, axis=0).tolist(), 
+                np.var(array, axis=1).tolist(), 
+                np.var(array.flatten()).tolist()]
+
+    #std
+    standard_deviation = [np.std(array, axis=0).tolist(), 
+                          np.std(array, axis=1).tolist(), 
+                          np.std(array.flatten()).tolist()]
+
+    #max
+    max = [np.max(array, axis=0).tolist(), 
+          np.max(array, axis=1).tolist(), 
+          np.max(array.flatten()).tolist()]
+    
+    #min
+    min = [np.min(array, axis=0).tolist(), 
+           np.min(array, axis=1).tolist(), 
+            np.min(array.flatten()).tolist()]
+
+    #sum
+    sum = [np.sum(array, axis=0).tolist(), 
+          np.sum(array, axis=1).tolist(), 
+          np.sum(array.flatten()).tolist()]
+    
+    #making a dict
+    
+    dict = {
+    'mean':mean,
+    'variance':variance,
+    'standard deviation':standard_deviation,
+    'max':max,
+    'min':min,
+    'sum':sum
+}
+
+    return dict
